@@ -1,0 +1,71 @@
+ {{!-- <div class="login">
+            <div class="login__content">
+                <div class="login__img">
+                    <img src="assets/img/img-login.svg" alt="">
+                </div>
+
+                <div class="login__forms">
+                    <form action="" class="login__registre" id="login-in">
+                        <h1 class="login__title">Sign In</h1>
+    
+                        <div class="login__box">
+                            <i class='bx bx-user login__icon'></i>
+                            <input type="text" placeholder="Username" class="login__input">
+                        </div>
+    
+                        <div class="login__box">
+                            <i class='bx bx-lock-alt login__icon'></i>
+                            <input type="password" placeholder="Password" class="login__input">
+                        </div>
+
+                        <a href="#" class="login__forgot">Forgot password?</a>
+
+                       <a href="#" class="login__button"> Sign In</a>
+
+                    </form>
+                </div>
+            </div>
+   </div> --}}
+
+   <style>
+       body{
+  margin: 0;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+  font-family: "Lato", sans-serif;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #555;
+  background-color: #ecf0f3;
+} 
+   </style>
+
+   <div class="login-div">
+        <form action="/login" method="post" class="login__registre" id="login-in">
+            <h1 class="login__title">Sign In</h1>
+
+            {{#if loginErr}}
+                <p>{{loginErr}}</p>
+            {{/if}}
+
+            <div class="login__box">
+                            <i class='bx bx-at login__icon'></i>
+                            <input type="Email" name="Email" placeholder="Email" class="login__input">
+                        </div>
+
+             <div class="login__box">
+                <i class='bx bx-lock-alt login__icon'></i>
+                <input type="password" name="Password" placeholder="Password" class="login__input">
+            </div>
+
+            <a href="#" class="login__forgot">Forgot password?</a>
+
+           
+
+           <button  class="login__button">Sign In</button>
+
+        </form>
+    </div>

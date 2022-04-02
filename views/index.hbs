@@ -1,0 +1,32 @@
+<section>
+    
+        <div class="container mt-5">
+            <div class="row">
+                {{#each products}}
+                <div class="col-md-4 p-3">
+                    <div class="card featured__card" style="width: 18rem;">
+                        {{!-- <span class="featured__tag">Sale</span> --}}
+                        <img class="card-img-top featured__img"
+                            src="/product-images/{{this._id}}first.jpg""
+                            alt=Card image cap">
+                        <div class="card-body">
+                            <h5 class="card-title featured__title">{{this.product}}</h5>
+                            <p class="card-text featured__price">RS.{{this.price}}</p>
+                            <p class="featured__price"></p>
+                            <a href="#" class="btn btn-dark featured__button">ADD TO CART</a>
+                        </div>
+                    </div>
+                </div>
+                {{/each}}
+                </div>
+            </div>
+        </div>
+        
+    </section>
+
+
+<!--==================== FEATURED ====================-->
+          
+
+
+    

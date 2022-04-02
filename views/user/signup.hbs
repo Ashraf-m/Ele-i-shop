@@ -1,0 +1,96 @@
+
+
+
+        {{!-- <div class="login">
+            <div class="login__content">
+                <div class="login__img">
+                    <img src="assets/img/img-login.svg" alt="">
+                </div>
+
+                <div class="login__forms">
+                    <form action="/signup" method="post" class="login__registre" id="login-in">
+                        <h1 class="login__title">Create Account</h1>
+    
+                        <div class="login__box">
+                            <i class='bx bx-user login__icon'></i>
+                            <input type="text" placeholder="Username" class="login__input">
+                        </div>
+
+                         <div class="login__box">
+                            <i class='bx bx-at login__icon'></i>
+                            <input type="text" placeholder="Email" class="login__input">
+                        </div>
+    
+                        <div class="login__box">
+                            <i class='bx bx-lock-alt login__icon'></i>
+                            <input type="password" placeholder="Password" class="login__input">
+                        </div>
+
+                        <a type="submit" class="login__button"> Sign Up</a> --}}
+                        {{!-- <button type="submit" class="btn btn-primary float-center">Signup</button> --}}
+                       
+                        
+
+                        {{!-- <div>
+                            <span class="login__account">Already have an Account ?</span>
+                           <a href="/login" class="login__signup" id="sign-in">Sign In</a>
+                        </div>
+
+                    </form>
+                </div>
+            </div>
+   </div> --}}
+
+
+    <style>
+       body{
+  margin: 0;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+  font-family: "Lato", sans-serif;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #555;
+  background-color: #ecf0f3;
+} 
+   </style>
+
+   <div class="login-div">
+        <form action="/signup" method="post" class="login__registre" id="login-in">
+            <h1 class="login__title">Sign Up</h1>
+
+            <div class="login__box">
+                <i class='bx bx-user login__icon'></i>
+                <input type="text" name="Name" placeholder="Username" class="login__input">
+            </div>
+
+
+            <div class="login__box">
+                            <i class='bx bx-at login__icon'></i>
+                            <input type="Email" name="Email" placeholder="Email" class="login__input">
+                        </div>
+
+            <div class="login__box">
+                <i class='bx bx-lock-alt login__icon'></i>
+                <input type="password" name="Password" placeholder="Password" class="login__input">
+            </div>
+
+            <div class="login">
+                            <span  class="login__account">Already have an Account ?</span>
+                            <a href="/login" class="login__signup" id="sign-in">Sign In</a>
+                        </div>
+
+           
+
+           <button type="submit" class="login__button">Sign Up</button>
+
+        </form>
+    </div>
+
+
+
+
+
