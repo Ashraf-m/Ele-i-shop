@@ -71,7 +71,7 @@ router.get("/checkout",(req,res)=>{
 console.log("check");
 var userDetails=req.session.user
   console.log(userDetails);
-res.render("user/checkout",{userDetails,user:true})
+res.render("user/checkout",{userDetails})
 })
 
 
