@@ -4,51 +4,91 @@
 </section> --}}
 
 {{!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" /> --}}
-<section id="cart-container" class="container my-5">
-    <table width="100%">
-        <thead>
-            <tr>
-                <td>Remove</td>
-                 <td>Image</td>
-                  <td>Product</td>
-                   <td>Price</td>
-                    <td>Quantity</td>
-                    <td>Total</td>
-            </tr>
-        </thead>
-        
-        <tbody>
-            <tr>
-            <td class="p-5"></i><a href="/"><i class="fa-solid fa-trash"></i></a></td>
-            <td class="p-5"><img style="width: 60px; height: 60px;" src="product-images/61efd93848595c1d167262adfirst.jpg" alt=""></td>
-            <td ><h5>hhhhh</h5></td>
-            <td ><h5>$65</h5></td>
-            <td ><input class="w-25 pl-1" value="1" type="number"></td>
-            <td >130.00</i></td>
-            </tr>
 
-            <tr>
-            <td class="p-5"><a href="#"></a></td>
-            <td><img style="width: 60px; height: 60px;" src="product-images/61efd93848595c1d167262adfirst.jpg" alt=""></td>
-            <td><h5>hhhhh</h5></td>
-            <td><h5>$65</h5></td>
-            <td><input class="w-25 pl-1" value="1" type="number"></td>
-            <td><h5>$130.00</h5></td>
-            </tr>
 
-            <tr>
-            <td class="p-5"><a href="#"></a></td>
-            <td><img style="width: 60px; height: 60px;" src="product-images/61efd93848595c1d167262adfirst.jpg" alt=""></td>
-            <td><h5>hhhhh</h5></td>
-            <td><h5>$65</h5></td>
-            <td><input class="w-25 pl-1" value="1" type="number"></td>
-            <td><h5>$130.00</h5></td>
-            </tr>
+<section id="cart-container">
+    <div class="container " >
+        <table class="table mt-5">
+            <thead >
+                <tr>
+                    <td >Image</td>
+                    <td >Product</td>
+                    <td >Price</td>
+                    <td >Quantity</td>
+                    <td >Remove</td>
+                    
+                </tr>
+            </thead>
+            <tbody>
+                
+                
 
-            
-        </tbody>
+                <tr>
+                    
+                    <td class="p-4"><img style="width: 70px;height:70px" src="product-images/61efd93848595c1d167262adfirst.jpg" alt=""></td>
+                    <td class="p-5" > <h5> hjkhjhjkhh{{this.product.Name}}</h5></td>
 
-    </table>
+                    <td class="p-5" ><h5>Rs.4566{{this.product.Price}}</h5></td>
+                    
+                    <td class="p-5" >
+                        
+                        <button class="cart-item-count mr-3" onclick="changeQuantity('{{this._id}}','{{this.product._id}}','{{../user}}',-1)">-</button>
+                        <span id="{{this.product._id}}">5{{this.quantity}}</span>
+                        <button class="cart-item-count ml-3" onclick="changeQuantity('{{this._id}}','{{this.product._id}}','{{../user}}',1)">+</button>
+                    </td>
+                    <td class="p-5">
+                        <a href="/"><i class="fa-solid fa-trash"></i></a>
+                    </td>
+                </tr>
+
+                <tr>
+                    
+                    <td class="p-4"><img style="width: 70px;height:70px" src="product-images/61efd93848595c1d167262adfirst.jpg" alt=""></td>
+                    <td class="p-5" > <h5> hjkhjhjkhh{{this.product.Name}}</h5></td>
+
+                    <td class="p-5" ><h5>Rs.4566{{this.product.Price}}</h5></td>
+                    
+                    <td class="p-5" >
+                        
+                        <button class="cart-item-count mr-3" onclick="changeQuantity('{{this._id}}','{{this.product._id}}','{{../user}}',-1)">-</button>
+                        <span id="{{this.product._id}}">5{{this.quantity}}</span>
+                        <button class="cart-item-count ml-3" onclick="changeQuantity('{{this._id}}','{{this.product._id}}','{{../user}}',1)">+</button>
+                    </td>
+                    <td class="p-5">
+                        <a href="/"><i class="fa-solid fa-trash"></i></a>
+                    </td>
+                </tr>
+
+                <tr>
+                    
+                    <td class="p-4"><img style="width: 70px;height:70px" src="product-images/61efd93848595c1d167262adfirst.jpg" alt=""></td>
+                    <td class="p-5" > <h5> hjkhjhjkhh{{this.product.Name}}</h5></td>
+
+                    <td class="p-5" ><h5>Rs.4566{{this.product.Price}}</h5></td>
+                    
+                    <td class="p-5" >
+                        
+                        <button class="cart-item-count mr-3" onclick="changeQuantity('{{this._id}}','{{this.product._id}}','{{../user}}',-1)">-</button>
+                        <span id="{{this.product._id}}">5{{this.quantity}}</span>
+                        <button class="cart-item-count ml-3" onclick="changeQuantity('{{this._id}}','{{this.product._id}}','{{../user}}',1)">+</button>
+                    </td>
+                    <td class="p-5">
+                        <a href="/"><i class="fa-solid fa-trash"></i></a>
+                    </td>
+                </tr>
+
+                 
+
+                
+
+                
+                
+                
+            </tbody>
+        </table>    
+        <hr>
+
+    </div>
 </section>
         
 
@@ -72,7 +112,7 @@
                 </div>
 
                 <div class="d-flex justify-content-between">
-                    <h6>Shipping</h6>
+                    <h6>Shipping free</h6>
                     <p>215.00</p>
                 </div>
                 <hr class="second-hr">
@@ -83,7 +123,7 @@
                 </div>
                
                <a href="/checkout" class="btn btn-dark ml-auto btn-cart" style="width: 50%;"><b>PROCEED TO CHECKOUT</b></a>
-                {{!-- <button class="btn btn-dark ml-auto">PROCEED TO CHECKOUT </button> --}}
+                
             </div>
         </div>
 
