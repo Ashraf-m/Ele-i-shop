@@ -67,6 +67,13 @@ router.get("/cart",verifyLogin,(req,res,next)=>{
 res.render("user/cart",{userDetails,user:true})
 })
 
+router.get('/add-to-cart/:id',verifyLogin,(req,res)=>{
+  userHelpers.addToCart(req.params.id,req.session.user._id).then(()=>{
+    res.redirect('/')
+  })
+})
+
+
 router.get("/checkout",(req,res)=>{
 console.log("check");
 var userDetails=req.session.user
