@@ -60,9 +60,11 @@ router.get('/logout',(req,res)=>{
   res.redirect('/')
 })
 
-router.get("/cart",verifyLogin,(req,res,next)=>{
-  var userDetails=req.session.user
-  console.log(userDetails);
+router.get("/cart",verifyLogin,async(req,res,next)=>{
+   var userDetails=req.session.user
+   
+   let products=await userHelpers.getCartProducts(req.session.user._id,)
+   console.log(products);
   
 res.render("user/cart",{userDetails,user:true})
 })
