@@ -21,61 +21,29 @@
             </thead>
             <tbody>
                 
-                
+                {{#each products}}
 
                 <tr>
-                    
-                    <td class="p-4"><img style="width: 70px;height:70px" src="product-images/61efd93848595c1d167262adfirst.jpg" alt=""></td>
-                    <td class="p-5" > <h5> hjkhjhjkhh{{this.product.Name}}</h5></td>
+                   
+                    <td class="p-4"><img style="width: 70px;height:70px" src="/product-images/{{this._id}}first.jpg" alt=""></td>
+                    <td class="p-5" > <h5> {{this.product}}</h5></td>
 
-                    <td class="p-5" ><h5>Rs.4566{{this.product.Price}}</h5></td>
+                    <td class="p-5" ><h5>{{this.price}}</h5></td>
                     
                     <td class="p-5" >
                         
                         <button class="cart-item-count mr-3" onclick="changeQuantity('{{this._id}}','{{this.product._id}}','{{../user}}',-1)">-</button>
-                        <span id="{{this.product._id}}">5{{this.quantity}}</span>
+                        <span id="{{this.product._id}}">{{this.quantity}}</span>
                         <button class="cart-item-count ml-3" onclick="changeQuantity('{{this._id}}','{{this.product._id}}','{{../user}}',1)">+</button>
                     </td>
                     <td class="p-5">
                         <a href="/"><i class="fa-solid fa-trash"></i></a>
                     </td>
-                </tr>
+                </tr>   
 
-                <tr>
-                    
-                    <td class="p-4"><img style="width: 70px;height:70px" src="product-images/61efd93848595c1d167262adfirst.jpg" alt=""></td>
-                    <td class="p-5" > <h5> hjkhjhjkhh{{this.product.Name}}</h5></td>
+                {{/each}}
 
-                    <td class="p-5" ><h5>Rs.4566{{this.product.Price}}</h5></td>
-                    
-                    <td class="p-5" >
-                        
-                        <button class="cart-item-count mr-3" onclick="changeQuantity('{{this._id}}','{{this.product._id}}','{{../user}}',-1)">-</button>
-                        <span id="{{this.product._id}}">5{{this.quantity}}</span>
-                        <button class="cart-item-count ml-3" onclick="changeQuantity('{{this._id}}','{{this.product._id}}','{{../user}}',1)">+</button>
-                    </td>
-                    <td class="p-5">
-                        <a href="/"><i class="fa-solid fa-trash"></i></a>
-                    </td>
-                </tr>
-
-                <tr>
-                    
-                    <td class="p-4"><img style="width: 70px;height:70px" src="product-images/61efd93848595c1d167262adfirst.jpg" alt=""></td>
-                    <td class="p-5" > <h5> hjkhjhjkhh{{this.product.Name}}</h5></td>
-
-                    <td class="p-5" ><h5>Rs.4566{{this.product.Price}}</h5></td>
-                    
-                    <td class="p-5" >
-                        
-                        <button class="cart-item-count mr-3" onclick="changeQuantity('{{this._id}}','{{this.product._id}}','{{../user}}',-1)">-</button>
-                        <span id="{{this.product._id}}">5{{this.quantity}}</span>
-                        <button class="cart-item-count ml-3" onclick="changeQuantity('{{this._id}}','{{this.product._id}}','{{../user}}',1)">+</button>
-                    </td>
-                    <td class="p-5">
-                        <a href="/"><i class="fa-solid fa-trash"></i></a>
-                    </td>
-                </tr>
+               
 
                  
 
