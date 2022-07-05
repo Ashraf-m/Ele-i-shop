@@ -24,11 +24,12 @@
                 {{#each products}}
 
                 <tr>
-                   
+                   {{#each this.product}}
                     <td class="p-4"><img style="width: 70px;height:70px" src="/product-images/{{this._id}}first.jpg" alt=""></td>
                     <td class="p-5" > <h5> {{this.product}}</h5></td>
 
                     <td class="p-5" ><h5>{{this.price}}</h5></td>
+                    {{/each}}
                     
                     <td class="p-5" >
                         

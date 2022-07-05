@@ -13,7 +13,8 @@
                             <h5 class="card-title featured__title">{{this.product}}</h5>
                             <p class="card-text featured__price">RS.{{this.price}}</p>
                             <p class="featured__price"></p>
-                            <a href="/add-to-cart/{{this._id}}" class="btn btn-dark featured__button">ADD TO CART</a>
+                            {{!-- <a href="/add-to-cart/{{this._id}}"  class="btn btn-dark featured__button">ADD TO CART</a> --}}
+                            <button onclick="addToCart('{{this._id}}')" class="btn btn-dark featured__button" >ADD TO CART</button>
                         </div>
                     </div>
                 </div>
@@ -24,6 +25,10 @@
         
     </section>
 
+
+    <script>
+       
+    </script>
 
 <!--==================== FEATURED ====================-->
           
