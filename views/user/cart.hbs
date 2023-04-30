@@ -24,12 +24,12 @@
                 {{#each products}}
 
                 <tr>
-                   {{#each this.product}}
-                    <td class="p-4"><img style="width: 70px;height:70px" src="/product-images/{{this._id}}first.jpg" alt=""></td>
-                    <td class="p-5" > <h5> {{this.product}}</h5></td>
+                   
+                    <td class="p-4"><img style="width: 70px;height:70px" src="/product-images/{{this.product._id}}first.jpg" alt=""></td>
+                    <td class="p-5" > <h5> {{this.product.product}}</h5></td>
 
-                    <td class="p-5" ><h5>{{this.price}}</h5></td>
-                    {{/each}}
+                    <td class="p-5" ><h5>{{this.product.price}}</h5></td>
+                    
                     
                     <td class="p-5" >
                         
@@ -100,3 +100,29 @@
 </section>
 
 
+<script>
+    function changeQuantity(cartId,proId,userId,count){
+        let quantity=parseInt(document.getElementById(proId).innerHTML)
+        count=parseInt(count)
+        console.log(userId)
+        $.ajax({
+            url:'/change-product-quantity',
+            data:{
+                cart:cartId,
+                product:proId,
+                count:count,
+                quantity:quantity
+            },
+            method:'post',
+            success:(response)=>{
+                if(response.removeProduct){
+                alert("Product removed from cart")
+                location.reload('/')
+            }else{
+                document.getElementById(proId).innerHTML=quantity+count
+            }
+            }
+            
+        })
+    }
+</script>
